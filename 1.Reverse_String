@@ -18,3 +18,11 @@ string reverseWord(string str)
         cout<<str[i];
     }
 }
+
+int main() 
+{ 
+    string str = "geeksforgeeks"; 
+    reverseStr(str); 
+    cout << str; 
+    return 0; 
+} 
