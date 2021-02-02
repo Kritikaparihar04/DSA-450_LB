@@ -1,0 +1,80 @@
+For non duplicate array elements
+
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    int a[]={1,6,2,0,3};
+    int b[]={3,2,7,9,1};
+    sort(a,a+5);
+    sort(b,b+5);
+    int i=0,j=0;
+
+    while(i<5 && j<5)
+    {
+     if(a[i]<b[j])
+     {
+         cout<<a[i]<<" ";
+         i++;
+     }
+     else if (a[i]>b[j])      
+     {
+         cout<<b[j]<<" ";
+         j++;
+     }            
+     else if(a[i]==b[j])
+     {
+          cout<<a[i]<<" ";
+          i++;
+          j++;
+     }
+                                                                                                                                                      
+    }
+    //bache hue elements k lie
+    while(i<5)
+    {
+        cout<<a[i++]<<" ";
+    }
+    while(j<5)
+    {
+        cout<<b[j++]<<" ";
+    }
+
+
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------
+USING MAP
+
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a[]={1,6,2,0,100,3};  
+    int b[]={3,2,7,2,1,99,99,012};
+
+    int m=sizeof(a)/sizeof(int);
+    int n=sizeof(b)/sizeof(int);
+  
+    unordered_map<int,int> map;    //Maps are associative containers that store elements in a mapped fashion. Each element has a key value and a mapped value. No two mapped values can have same key values.
+    for (int i = 0; i <m; i++)
+    {
+      map[a[i]]++;                //map m arr 1 store
+    }
+
+    for(int i=0;i<n;i++)
+    {
+        map[b[i]]++;               //map m arr 2 store
+    }
+    
+    int c=map.size();
+    cout<<c;                      //return size
+  
+}
+
+//time complexity O(m+n)
