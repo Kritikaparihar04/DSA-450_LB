@@ -14,7 +14,7 @@ class Solution{
             {
                 return B;
             }
-            else if(B>C)
+            else if (B>C)
             {
                 return C;
             }
