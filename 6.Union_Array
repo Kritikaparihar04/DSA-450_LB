@@ -18,6 +18,7 @@ int main()
      {
          cout<<a[i]<<" ";
          i++;
+         
      }
      else if (a[i]>b[j])      
      {
