@@ -22,3 +22,4 @@ cout<<att[i]<<" ";
 
 }
 
+/*In this we can also use stl Library to rotate the array*/
