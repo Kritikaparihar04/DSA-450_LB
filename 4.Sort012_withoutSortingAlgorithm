@@ -4,7 +4,7 @@ void arrange(int arr[],int s)
 {
  int c0=0,c1=0,c2=0;
  for(int i=0;i<s;i++)
- {
+ {// Maintaining the count for the elements
      if(arr[i]==0)
         c0++;
      else if(arr[i]==1)
@@ -14,7 +14,7 @@ void arrange(int arr[],int s)
  }
   for(int i=0;i<c0;i++)
        arr[i]=0;
- 
+ // I value is now updated here and the sorted elements are arranged in the array
   for(int i=c0;i<c0+c1;i++)
        arr[i]=1;
 
