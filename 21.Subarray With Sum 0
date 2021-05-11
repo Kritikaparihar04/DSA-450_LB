@@ -1,0 +1,20 @@
+    bool subArrayExists(int arr[], int n)
+    {
+         int tempSum=0;
+    map<int,int>ourmap;
+     for(int i=0;i<n;i++)
+     {
+        tempSum+=arr[i];
+        if(tempSum==0||ourmap.find(tempSum)!=ourmap.end())
+        {
+            return true;
+        }
+         ourmap[tempSum]++;
+     }
+        return false;
+    }
+
+//if the temp sum is 0 then return true otherwise check in the hashmap if it is not empty that is tempSum exists in the map or not .
+if exists in the map it means till now there is a number which nullify the sum of the other numbers so it means there exists an array  whicjh sum is 0
+so return true 
+otherwise return false;
