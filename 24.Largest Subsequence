@@ -10,6 +10,7 @@
       
        for(int i=1;i<N;i++)
        {
+       
            if(arr[i-1]==arr[i]-1)
            {
                count++;
