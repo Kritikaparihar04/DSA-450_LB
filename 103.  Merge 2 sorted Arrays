@@ -1,0 +1,29 @@
+ 	void merge(int arr1[], int arr2[], int n, int m) {
+	   
+	   priority_queue<int,vector<int>,greater<int>>q;
+	   
+	   //insert into the priority queue
+	   for(int i=0;i<n;i++)
+	   {
+	       q.push(arr1[i]);
+	   }
+	   for(int j=0;j<m;j++)
+	   {
+	       q.push(arr2[j]);
+	   }
+	   
+	   //now push the top element from the min priority q to arr
+	   
+	   for(int i=0;i<n;i++)
+	   {
+	       arr1[i]=q.top();
+	       q.pop();
+	   }
+	   
+	   for(int j=0;j<m;j++)
+	   {
+	       arr2[j]=q.top();
+	       q.pop();
+	   }
+	   
+	}
