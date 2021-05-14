@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+#include<bits/stdc++.h>
+void printd(string s)
+{
+    map<char,int>ourmap;
+    for(int i=0;i<s.length();i++)
+    {
+    ourmap[s[i]]++;
+    }
+
+    for(auto it:ourmap)
+    {
+        if(it.second>1)
+        {
+            cout<<it.first<<" count is "<<it.second<<endl;
+        }
+    }
+}
+int main()
+{
+    string s="fasdaadf";
+    printd(s);
+}
