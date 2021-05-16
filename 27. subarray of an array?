@@ -1,0 +1,17 @@
+ 
+string isSubset(int a1[], int a2[], int n, int m) {
+    string t="Yes";
+    string f="No";
+   map<int,int>ourmap;
+   for(int i=0;i<n;i++)
+   {
+       ourmap[a1[i]]++;
+   }
+    
+    for(int j=0;j<m;j++)
+    {
+        if(ourmap[a2[j]] <1)
+        return f;
+    }
+return t;    
+}
