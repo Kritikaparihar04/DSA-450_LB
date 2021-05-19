@@ -1,0 +1,42 @@
+ bool isHeap(struct Node * tree)
+    {
+        bool flag=false;
+      //base case
+      if (tree==NULL)
+      return true;
+        
+   queue<Node*>q;
+   
+   q.push(tree);
+   
+   while(!q.empty())
+   {
+       Node* temp=q.front();
+       q.pop();
+       if(temp->left)
+       {
+       if(flag||temp->data<=temp->left->data)
+       {
+           return false;
+       }
+       
+       q.push(temp->left);
+       }
+       else
+       flag=true;
+   
+       
+       //in a same manner we will check for the right element
+       if(temp->right)
+       {
+           if(flag||temp->right->data>temp->data)
+           return false;
+           
+           q.push(temp->right);
+       }
+       else
+       flag=true;
+       
+       
+       
+   }
