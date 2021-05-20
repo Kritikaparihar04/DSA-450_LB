@@ -1,0 +1,23 @@
+    long long minCost(long long arr[], long long n) {
+        // Your code here
+        //min priority queue 
+        priority_queue<long long,vector<long long>,greater<long long>>pq;
+        for(long long i=0;i<n;i++)
+        {
+            pq.push(arr[i]);
+        }
+        
+        long long n1,n2,ans,count=0;
+        while(pq.size()!=1)
+        {
+            n1=pq.top();
+            pq.pop();
+            n2=pq.top();
+            pq.pop();
+            ans=n1+n2;
+            count+=ans;
+            pq.push(ans);
+        }
+        
+        return count;
+    }
