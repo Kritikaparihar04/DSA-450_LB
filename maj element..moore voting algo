@@ -1,0 +1,35 @@
+   int majorityElement(int a[], int size)
+    {
+        
+     //find the candidate for the majority element let initially it be a first element
+     
+     int majIndex=0,count=1;
+     for(int i=1;i<size;i++)
+     {
+         if(a[i]==a[majIndex])
+          count++;
+          else
+          count--;
+          
+          if(count ==0)
+            {majIndex=i;
+            count=1;
+            }
+            
+            
+     }
+        count=0;
+        
+        //check for it
+        
+        for(int i=0;i<size;i++)
+        {
+            if(a[i]==a[majIndex])
+            count++;
+        }
+        
+        if(count>size/2)
+          return a[majIndex];
+          else
+          return -1;
+    }
